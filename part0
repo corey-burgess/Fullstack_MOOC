@@ -43,3 +43,19 @@
   browser executes the event handler
   that renders notes to display
   end note
+  
+0.6
+  
+  Note:
+  spa.js locates notes_form element and registers an onClick
+  event handler.  User submits new note, and spa.js prevents default HTTP POST.
+  Handler creates a new note, renders on page, and sends new note to server.
+  
+  browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+  server->browser: JSON
+  
+  Note:
+  Server parses JSON sent from browser
+  that contains note and timestamp, then
+  responds with updated JSON.
+  
